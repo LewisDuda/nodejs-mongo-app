@@ -20,7 +20,8 @@ module.exports = (app) => {
     app.put('/stores/:storeId', stores.update);    
     
     // Delete a Store with storeId
-    app.delete('/stores/:storeId', stores.delete);    
+    app.delete('/stores/:storeId', stores.delete);
+    
 
     // Retrieve a single Note with noteId
    // app.get('/notes/:id', notes.findOne);
