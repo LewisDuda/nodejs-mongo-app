@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 
 require('./app/routes/store.routes.js')(app);
 
-app.all('*',function (req, res, next) {
+/*app.all('*',function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
     res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
@@ -44,7 +44,7 @@ app.all('*',function (req, res, next) {
     else {
       next();
     }
-  });
+  });*/
 
 // listen for requests
 app.listen(8080, () => {
