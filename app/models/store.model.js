@@ -7,6 +7,7 @@ const StoreSchema = mongoose.Schema({
     phone:String,
     price:String,
     website:String,
+    picture:String,
     city:String,
     kind:String
 }, {

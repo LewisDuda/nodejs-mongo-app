@@ -3,7 +3,7 @@ const Store = require('../models/store.model.js');
 // Create and Save a new Store
 exports.create = (req, res) => {
     // Validate request
-    if(!req.body.name || !req.body.businesstime || !req.body.address || !req.body.phone || !req.body.price || !req.body.website || !req.body.city || !req.body.kind) {
+    if(!req.body.name || !req.body.businesstime || !req.body.address || !req.body.phone || !req.body.price || !req.body.website || !req.body.picture || !req.body.city || !req.body.kind) {
         return res.status(400).send({
             message: "Store content can not be empty"
         });
@@ -17,6 +17,7 @@ exports.create = (req, res) => {
         phone: req.body.phone,
         price: req.body.price,
         website: req.body.website,
+        picture: req.body.picture,
         city: req.body.city,
         kind: req.body.kind
     });
@@ -113,7 +114,7 @@ exports.findOneByKind = (req, res) => {
 // Update a store identified by the storeId in the request
 exports.update = (req, res) => {
     // Validate Request
-    if(!req.body.name || !req.body.businesstime || !req.body.address || !req.body.phone || !req.body.price || !req.body.website || !req.body.city || !req.body.kind) {
+    if(!req.body.name || !req.body.businesstime || !req.body.address || !req.body.phone || !req.body.price || !req.body.website || !req.body.picture || !req.body.city || !req.body.kind) {
         return res.status(400).send({
             message: "Store content can not be empty"
         });
@@ -127,6 +128,7 @@ exports.update = (req, res) => {
         phone: req.body.phone,
         price: req.body.price,
         website: req.body.website,
+        picture: req.body.picture,
         city: req.body.city,
         kind: req.body.kind
     }, {new: true})
